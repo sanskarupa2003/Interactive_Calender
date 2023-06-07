@@ -1,106 +1,86 @@
-# interactive_calender
-<!DOCTYPE html>
+<DOCTYPE HTML!>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<h1>
+EVENT CALENDAR
+</h1>
+
 <style>
-body {font-family: Arial, Helvetica, sans-serif;}
-form {border: 3px solid #f1f1f1;}
 
-input[type=text], input[type=password] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
+h1 {
+  font-family: "Times New Roman", Times, serif;
+  color: #;
+  font-size: 50px
 }
 
-button {
-  background-color: #FF9800;
+
+
+
+body {
+  background-image: url('white.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;  
+}
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color:#FF9800;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
   color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-}
-
-button:hover {
-  opacity: 0.8;
-}
-
-.cancelbtn {
-  width: auto;
-  padding: 10px 18px;
-  background-color: #f44336;
-}
-
-.imgcontainer {
   text-align: center;
-  margin: 24px 0 12px 0;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
-img.avatar {
-  width: 5%;
-  border-radius: 50%;
-}
-
-.container{
-  margin: auto;
-  width: 50%;
-  border: 1px solid gray;
-  padding: 10px;
-  
-  
-  width: 20%;
-  
-}
-
-span.psw {
-  float: right;
-  padding-top: 16px;
-}
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-  span.psw {
-     display: block;
-     float: none;
-  }
-
-  .cancelbtn {
-     width: 100%;
-  }
+li a:hover {
+  background-color: #111;
 }
 </style>
+
+<link href="css.css" rel="stylesheet">
+<script async src="script.js"></script>
+
 </head>
+
 <body>
+<ul>
+  <li><a class="active" href="project.html">Home</a></li>
+  
+  <li><a href="aboutus.html">About Us</a></li>
+</ul>
 
-<h2>Login Here</h2>
+ <div id="cal-wrap">
+      <!-- FOR CHOOSING YEAR MONTH -->
+      <div id="cal-date">
+        <select id="cal-mth"></select>
+        <select id="cal-yr"></select>
+      </div>
 
-<form action="https://github.com/sanskarupa2003/interactive_calender/blob/main/MAIN.html" method="post">
-  <div class="imgcontainer">
-    <img src="img_avatar2.png" alt="Avatar" class="avatar">
-  </div>
+      <!-- CALENDAR -->
+      <div id="cal-container"></div>
 
-  <div class="container">
-    <label for="uname"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" required>
-
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
-        
-   <button type="submit">Login</button>
-    <label>
-      <input type="checkbox" checked="checked" name="remember"> Remember me
-    </label>
-  </div>
-
-  <div class="container" style="background-color:#f1f1f1">
-    <button type="button" class="cancelbtn">Cancel</button>
-    <span class="psw">Forgot <a href="#">password?</a></span>
-  </div>
-</form>
+      <!--EVENT FORM -->
+      <form id="cal-event">
+        <h1 id="evt-head"></h1>
+        <div id="evt-date"></div>
+        <textarea id="evt-details" required></textarea>
+        <input id="evt-close" type="button" value="Close"/>
+        <input id="evt-del" type="button" value="Delete"/>
+        <input id="evt-save" type="submit" value="Save"/>
+      </form>
+    </div>
 
 </body>
 </html>
