@@ -16,4 +16,4 @@
 
 ### ✨ Images
 
-<img src="https://github.com/sanskarupa2003/Interactive_Calender/blob/main/Calendar.png" width="1000px" height="600px" />
+<img src="https://github.com/sanskarupa2003/Interactive_Calender/blob/main/Calendar.png" width="1000px" height="500px" />
